@@ -8,6 +8,8 @@ const { authenticate } = require('../middleware/auth');
 const validate = require('../middleware/validate');
 const v = require('../utils/validators');
 
+router.use(authenticate);
+
 
 router.get('/', aiController.types);
 router.get('/history', aiController.history);
